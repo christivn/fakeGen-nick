@@ -14,8 +14,8 @@ def nick():
     vocales_primero = bool(randint(0, 1))
     resultado = ''
     for i in range(0, randint(MIN_LENGTH, MAX_LENGTH)):
-        is_even = i % 2 == 0
-        if (vocales_primero and is_even) or (not vocales_primero and not is_even):
+        es_par = i % 2 == 0
+        if (vocales_primero and es_par) or (not vocales_primero and not es_par):
             resultado+=choice(vocales)
         else:
             resultado+=choice(consonantes)
